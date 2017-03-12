@@ -74,4 +74,9 @@ mongoose.Schema方法用来定义数据集的格式（schema），mongoose.model
 
 [node seed时错误:DeprecationWarning: Mongoose: mpromise](http://stackoverflow.com/questions/38138445/node3341-deprecationwarning-mongoose-mpromise)
 
-FAQ:
+## csurf
+> Node.js CSRF protection middleware
+[csurf](Node.js CSRF protection middleware.)
+
+## session
+> npm install express-session --save
