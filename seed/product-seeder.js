@@ -6,20 +6,20 @@ mongoose.connect('mongodb://localhost:27017/shopping');
 var products = [
     new Product({
         imagePath: 'http://placehold.it/400x150',
-        title: 'one test',
-        description: 'one one one description test content',
+        title: 'four test',
+        description: ' four four one one description test content',
         price: 10
     }),
      new Product({
         imagePath: 'http://placehold.it/400x150',
-        title: 'two test test',
-        description: 'two two description test content',
+        title: 'five test test',
+        description: 'five five description test content',
         price: 10
     }),
      new Product({
         imagePath: 'http://placehold.it/400x150',
-        title: 'three test test',
-        description: 'three three description test content',
+        title: 'six test test',
+        description: 'six six description test content',
         price: 10
     })
 ];
