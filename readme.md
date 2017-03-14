@@ -121,3 +121,11 @@ mongoose.Schema方法用来定义数据集的格式（schema），mongoose.model
 ## express-validator
 
 [express-validator](https://github.com/ctavan/express-validator)
+
+##
+> session存储在服务器的某处，非常容易leak,不适合在生产环境中，如，用户登录了某网站，这时候服务器突然挂了，然后另外一个机器跑起来，数据库是一个mongodb分布式，此时从库里读取用户的session，即session持久化
+
+使用connect-mongo中间件  `npm install connect-mongo --save`
+[存储session持久化的中间件](https://github.com/expressjs/session#compatible-session-stores)
+本项目使用[connect-mongo](https://www.npmjs.com/package/connect-mongo)
+添加一个session存储
