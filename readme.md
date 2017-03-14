@@ -76,7 +76,35 @@ mongoose.Schema方法用来定义数据集的格式（schema），mongoose.model
 
 ## csurf
 > Node.js CSRF protection middleware
-[csurf](Node.js CSRF protection middleware.)
+
+[csurf](https://github.com/expressjs/csurf)
+
+注意: Requires either a session middleware or cookie-parser to be initialized first.
+
+安装好后，在路由文件中引用
 
 ## session
 > npm install express-session --save
+
+## passport
+> 用户认证，npm install passport --save
+
+[使用passport前需要配置](http://passportjs.org/docs/configure)
+
+## bcrypt-nodejs
+> hash password, npm install bcrypt-nodejs --save
+
+## connect-flash
+> The flash is a special area of the session used for storing messages.消息闪存，相当于laravel中with
+
+`npm install connect-flash --save`
+
+## passport-local
+> 使用用户名和密码的验证策略
+
+[passport-local doc](https://github.com/jaredhanson/passport-local)
+
+注意: 默认的username 和 password改成自定义的方式
+
+
+`npm install passport-local --save` 
