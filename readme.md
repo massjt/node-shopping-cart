@@ -91,6 +91,16 @@ mongoose.Schema方法用来定义数据集的格式（schema），mongoose.model
 
 [使用passport前需要配置](http://passportjs.org/docs/configure)
 
+[具体步骤含义参考](http://blog.chengjianhua.cn/2016/06/22/authenticate-by-passport/)
+
+遇到的大坑，在看`passport.js`的文时，没有理解`passport.serializeUser`和`passport.deserializeUser`含义，特别是案例中的参数user,
+
+一直遇到报错，`ReferenceError: user is not defined`,纠其原因，主要是没理解这两个方法的含义
+
+`serializeUser` 是用户登录验证成功后，把相应的数据存到session中，其参数就是 `new LocalStrategy()`中回调的值
+
+`deserializeUser` 是根据 `serializeUser`存储在session中的值，读取用户的全部数据对象，并封装到req.user里
+
 ## bcrypt-nodejs
 > hash password, npm install bcrypt-nodejs --save
 
@@ -106,5 +116,8 @@ mongoose.Schema方法用来定义数据集的格式（schema），mongoose.model
 
 注意: 默认的username 和 password改成自定义的方式
 
-
 `npm install passport-local --save` 
+
+## express-validator
+
+[express-validator](https://github.com/ctavan/express-validator)
