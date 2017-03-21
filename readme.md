@@ -129,3 +129,14 @@ mongoose.Schema方法用来定义数据集的格式（schema），mongoose.model
 [存储session持久化的中间件](https://github.com/expressjs/session#compatible-session-stores)
 本项目使用[connect-mongo](https://www.npmjs.com/package/connect-mongo)
 添加一个session存储
+
+
+## FAQ
+
+> 遇到一个报错
+
+	thread1] Failed to connect to 127.0.0.1:27017, in(checking socket for error after poll), reason: Connection refused
+
+	由于我指定了储存数据的文件夹，重新指定即可
+
+	./mongod --dbpath /User/Steven/myData
