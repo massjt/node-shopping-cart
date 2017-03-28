@@ -140,3 +140,28 @@ mongoose.Schema方法用来定义数据集的格式（schema），mongoose.model
 	由于我指定了储存数据的文件夹，重新指定即可
 
 	./mongod --dbpath /User/Steven/myData
+
+## 部署服务器
+
+- 选择一个目录,下载nodejs,用当前最新版本v7.7.4,执行 `wget https://nodejs.org/dist/v7.7.4/node-v7.7.4.tar.gz`
+- 解压 `tar -xf node-v7.7.4.tar.gz` 
+- 进入目录
+
+```
+cd node-v7.7.4
+./configure
+make (注意: make时间会久些)
+sudo make install
+```
+- 检测是否安装成功,可通过 `node -v 和 npm -v`检查
+- 更新`Node`版本， `npm install -g n`  再 `n stable`
+
+
+在部署服务器的时候，遇到 `virtual memory exhausted: Cannot allocate memory` 报错,无法分配内存,这时候就可以用到`swap分区`
+具体`swap`含义，请看 [Linux交换空间（swap space](https://segmentfault.com/a/1190000008125116)
+
+解决方法: [How To Create A Swap File In Linux](https://digitizor.com/create-swap-file-ubuntu-linux/)
+
+/root/mongodb/bin/mongod --dbpath=/var/mongodb/data --logpath /var/mongodb/logs/log.log -fork
+
+/root/mongodb/bin/mongod --dbpath=/var/mongodb/data --logpath /var/mongodb/logs/log.log -fork

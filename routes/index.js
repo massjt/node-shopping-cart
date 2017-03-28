@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
     for (let i = 0; i < docs.length; i += chunkSize) {
       productChunks.push(docs.slice(i, i + chunkSize));
     }
-    res.render('shop/index', { title: 'Shopping Cart' , products: productChunks});
+    res.render('shop/index', { title: 'Shopping Cart demo' , products: productChunks});
   });
 });
 
